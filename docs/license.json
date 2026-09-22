@@ -4,9 +4,8 @@
   "licenseType": "SALESPERSON",
   "status": "LICENSED",
   "expiration": "03/08/29",
-  "lastCheckedUtc": null,
+  "lastCheckedUtc": "2026-09-22T04:58:00+00:00",
   "source": "California Department of Real Estate Licensee List",
-  "sourceFile": null,
-  "officialVerificationUrl": "https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01890136",
-  "note": "This file is populated automatically by GitHub Actions from the California DRE Licensee List. Run the workflow once before connecting the GoDaddy embed."
+  "sourceFile": "CurrList.csv",
+  "officialVerificationUrl": "https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01890136"
 }
