@@ -129,10 +129,26 @@ def find_record_in_zip(zip_bytes):
             raw = z.read(name)
 
             if name.lower().endswith(".csv"):
-                df = pd.read_csv(io.BytesIO(raw), dtype=str, header=None, keep_default_na=False)
-                record = find_record_in_dataframe(df)
-                if record:
-                    return name, record
+    try:
+        df = pd.read_csv(
+            io.BytesIO(raw),
+            dtype=str,
+            header=None,
+            keep_default_na=False,
+            encoding="cp1252"
+        )
+    except UnicodeDecodeError:
+        df = pd.read_csv(
+            io.BytesIO(raw),
+            dtype=str,
+            header=None,
+            keep_default_na=False,
+            encoding="latin-1"
+        )
+
+    record = find_record_in_dataframe(df)
+    if record:
+        return name, record
 
             else:
                 engine = "openpyxl" if name.lower().endswith(".xlsx") else "xlrd"
