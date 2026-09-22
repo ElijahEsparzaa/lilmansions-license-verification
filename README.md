@@ -11,10 +11,6 @@ This project automatically retrieves the public California Department of Real Es
 - Writes the result to `docs/license.json`.
 - Commits changes only when the license data changes.
 
-## Important
-
-The DRE says its public license information represents its records and may not reflect pending licensing changes. The website should therefore include an official DRE verification link and should not claim that the site's copy is an independent government verification.
-
 ## Official DRE lookup
 
 https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01890136
